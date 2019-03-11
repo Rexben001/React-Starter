@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from '../../Components/Intro';
 import SeriesList from '../../Components/SeriesList';
+import '../../assets/Loader/loader.css';
 
 class Series extends Component {
     state = {
@@ -38,7 +39,7 @@ class Series extends Component {
                     <p>No TV series has been found</p>
                 }
                 {
-                    isFetching && <p>Loading...</p>
+                    isFetching && <p className="loader"></p>
                 }
                 < SeriesList list={series} />
             </div >
